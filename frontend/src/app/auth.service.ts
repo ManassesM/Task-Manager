@@ -22,6 +22,12 @@ export class AuthService {
     );
   }
 
+  logOut() {
+    this.removeSession();
+
+    this.router.navigate(['/login']);
+  }
+
   signup(email: string, password: string) {
     return this.webService.signup(email, password).pipe(
       shareReplay(),
@@ -31,13 +37,6 @@ export class AuthService {
         console.log("Successfully signed up and now logged in!");
       })
     );
-  }
-
-
-  logOut() {
-    this.removeSession();
-
-    this.router.navigate(['/login']);
   }
 
   getAccessToken() {
@@ -56,18 +55,6 @@ export class AuthService {
     localStorage.setItem('x-access-token', accessToken)
   }
 
-  private setSession(userId: string, accessToken: string, refreshToken: string) {
-    localStorage.setItem('user-id', userId);
-    localStorage.setItem('x-access-token', accessToken);
-    localStorage.setItem('x-refresh-token', refreshToken);
-  }
-
-  private removeSession() {
-    localStorage.removeItem('user-id');
-    localStorage.removeItem('x-access-token');
-    localStorage.removeItem('x-refresh-token');
-  }
-
   getNewAccessToken() {
     return this.http.get(`${this.webService.ROOT_URL}/users/me/access-token`, {
       headers: {
@@ -80,5 +67,17 @@ export class AuthService {
         this.setAcessToken(res.headers.get('x-access-token'));
       })
     )
+  }
+
+  private setSession(userId: string, accessToken: string, refreshToken: string) {
+    localStorage.setItem('user-id', userId);
+    localStorage.setItem('x-access-token', accessToken);
+    localStorage.setItem('x-refresh-token', refreshToken);
+  }
+
+  private removeSession() {
+    localStorage.removeItem('user-id');
+    localStorage.removeItem('x-access-token');
+    localStorage.removeItem('x-refresh-token');
   }
 }

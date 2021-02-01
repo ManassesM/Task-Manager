@@ -13,18 +13,36 @@ export class TaskService {
     return this.webRequestService.get('lists');
   }
 
+  getTasks(listId: string) {
+    return this.webRequestService.get(`lists/${listId}/tasks`);
+  }
+
+  deleteList(id: string) {
+    return this.webRequestService.delete(`lists/${id}`);
+  }
+
+  deleteTask(listId: string, taskId: string) {
+    return this.webRequestService.delete(`lists/${listId}/tasks/${taskId}`);
+  }
+
   createList(title: string) {
     // We want to send a web request to create a list
     return this.webRequestService.post('lists', { title });
   }
 
-  getTasks(listId: string) {
-    return this.webRequestService.get(`lists/${listId}/tasks`);
-  }
-
   createTask(title: string, listId: string) {
     // We want to send a web request to create a task
     return this.webRequestService.post(`lists/${listId}/tasks`, { title });
+  }
+
+  updateList(id: string, title: string) {
+    // We want to send a web request to update a list
+    return this.webRequestService.patch(`lists/${id}`, { title });
+  }
+
+  updateTask(listId: string, taskId: string, title: string) {
+    // We want to send a web request to update a task
+    return this.webRequestService.patch(`lists/${listId}/tasks/${taskId}`, { title });
   }
 
   complete(task: Task) {

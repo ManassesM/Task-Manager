@@ -140,14 +140,14 @@ app.post('/lists', authenticate, (req, res) => {
 
 // 
 // PATCH /lists/:id
-// Purpose: Updade a specofoed list 
+// Purpose: Updade a specified list 
 // 
 app.patch('/lists/:id', authenticate, (req, res) => {
     //  We want to update a the specified list  (list document with id in the URL) with thenew values specified in the JSON body of the request
     List.findOneAndUpdate({ _id: req.params.id, _userId: req.user_id }, {
         $set: req.body
     }).then(() => {
-        res.sendStatus(200);
+        res.send({ 'message': 'updated successfully' })
     });
 });
 
@@ -224,7 +224,7 @@ app.patch('/lists/:listId/tasks/:taskId', authenticate, (req, res) => {
     // We want to update an existing task (specified by taskId)
 
     List.findOne({
-        _id: rq.params.listId,
+        _id: req.params.listId,
         _userId: req.user_id
     }).then((list) => {
         if (list) {
@@ -258,7 +258,7 @@ app.patch('/lists/:listId/tasks/:taskId', authenticate, (req, res) => {
 // 
 app.delete('/lists/:listId/tasks/:taskId', authenticate, (req, res) => {
     List.findOne({
-        _id: rq.params.listId,
+        _id: req.params.listId,
         _userId: req.user_id
     }).then((list) => {
         if (list) {
