@@ -18,7 +18,6 @@ export class NewTaskComponent implements OnInit {
     this.route.params.subscribe(
       (params: Params) => {
         this.listId = params[('listId')];
-        console.log(this.listId);
       }
 
     )

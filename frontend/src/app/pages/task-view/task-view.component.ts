@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
+import { AuthService } from 'src/app/auth.service';
 import { List } from 'src/app/modules/list.module';
 import { Task } from 'src/app/modules/task.module';
 import { TaskService } from 'src/app/task.service';
@@ -16,7 +17,7 @@ export class TaskViewComponent implements OnInit {
 
   selectedListId: string;
 
-  constructor(private taskService: TaskService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private taskService: TaskService, private route: ActivatedRoute, private router: Router, private authService: AuthService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(
@@ -38,11 +39,10 @@ export class TaskViewComponent implements OnInit {
   }
 
   onTaskClick(task: Task) {
-    // We want to set the task to completed
+    // we want to set the task to completed
     this.taskService.complete(task).subscribe(() => {
       // the task has been set to completed successfully
       task.completed = !task.completed;
-
     })
   }
 
@@ -56,5 +56,9 @@ export class TaskViewComponent implements OnInit {
     this.taskService.deleteTask(this.selectedListId, id).subscribe((res: any) => {
       this.tasks = this.tasks.filter(val => val._id !== id);
     });
+  }
+
+  signOut() {
+    this.authService.logOut();
   }
 }
