@@ -1,0 +1,101 @@
+[33mcommit 7d71156cef7397701612a86f19f6a38d0285db92[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Manassés Moura <45439416+ManassesM@users.noreply.github.com>
+Date:   Mon Feb 1 22:30:58 2021 -0300
+
+    Create README.md
+
+[33mcommit de315fd80b5a1b57b36fa24ef6484468915095a1[m
+Author: ManassesM <manamiui2001@gmail.com>
+Date:   Mon Feb 1 21:56:49 2021 -0300
+
+    New updates and bugs fixed
+
+[33mcommit b4b2b971fbfc3c4c84f2c0a5d634e91422d7eeeb[m
+Author: ManassesM <manamiui2001@gmail.com>
+Date:   Mon Feb 1 19:49:04 2021 -0300
+
+    Project finished
+
+[33mcommit e0ec7e89dec62e6816440f8a09bd7551bc50a402[m
+Author: ManassesM <manamiui2001@gmail.com>
+Date:   Mon Feb 1 19:31:03 2021 -0300
+
+    signup, edit/delete and list/task components created
+
+[33mcommit 79d0935134aeeee5bda175bff481d610e15f49b7[m
+Author: ManassesM <manamiui2001@gmail.com>
+Date:   Mon Feb 1 15:25:05 2021 -0300
+
+    signup-page component created
+
+[33mcommit b702ad8d91c85d74d5cbd18d38cb1d5ccad88da3[m
+Author: ManassesM <manamiui2001@gmail.com>
+Date:   Mon Feb 1 10:56:28 2021 -0300
+
+    Handling Access Token Refresh on Frontend | 400 (Bad Request) Fixed
+
+[33mcommit 15bdde04e50b9f2c369ec6c5c34b73d1cb4a12fb[m
+Author: ManassesM <manamiui2001@gmail.com>
+Date:   Fri Jan 29 19:34:47 2021 -0300
+
+    Protecting API Routes
+
+[33mcommit 1eddb984b2f40d1a21f72bf6b45932e25b032579[m
+Author: ManassesM <manamiui2001@gmail.com>
+Date:   Fri Jan 29 13:45:29 2021 -0300
+
+    Auth service and web-req-interceptor created | 400 (Bad Request)
+
+[33mcommit f8cd610a4ffbf212e50f0c98b4c3653f7148fab8[m
+Author: ManassesM <manamiui2001@gmail.com>
+Date:   Thu Jan 28 18:28:02 2021 -0300
+
+    Login Page and Users&Authentication with JWT
+
+[33mcommit 5da6273613b2515faeaf869f7d07db32ed2ad5e8[m
+Author: ManassesM <manamiui2001@gmail.com>
+Date:   Thu Jan 28 15:49:39 2021 -0300
+
+    Setting Tasks to Completed
+
+[33mcommit 19d29823f4cae1867a085cd9befa1b9b759c16b4[m
+Author: ManassesM <manamiui2001@gmail.com>
+Date:   Thu Jan 28 15:07:49 2021 -0300
+
+    new-task component, task module and list module were created
+
+[33mcommit 48984f565dea6cf59e80592ce2ffa9ec341eceeb[m
+Author: ManassesM <manamiui2001@gmail.com>
+Date:   Thu Jan 28 14:29:57 2021 -0300
+
+    New Task Button
+
+[33mcommit 44c55ae2b3380f517342f30e3a70060f6825b04d[m
+Author: ManassesM <manamiui2001@gmail.com>
+Date:   Thu Jan 28 14:15:08 2021 -0300
+
+    new-list component created and DB misspell fixed
+
+[33mcommit 7ace5b3a08f2bcc7c37349eda05fbbcb0985f4a7[m
+Author: ManassesM <manamiui2001@gmail.com>
+Date:   Thu Jan 28 10:18:59 2021 -0300
+
+    TaskService, WebService and CORS
+
+[33mcommit 8a1de786c66dd73d1a6d9ac1fa7ac0d2e7c4ceef[m
+Author: ManassesM <manamiui2001@gmail.com>
+Date:   Wed Jan 27 17:49:54 2021 -0300
+
+    API Built
+
+[33mcommit eb462b4fd3d77d42a379f02e0dbb428827dd6eb0[m
+Author: ManassesM <manamiui2001@gmail.com>
+Date:   Wed Jan 27 13:26:15 2021 -0300
+
+    Task view layout
+
+[33mcommit f3b0f189360d5521278a3140206610316f6e8942[m
+Author: ManassesM <manamiui2001@gmail.com>
+Date:   Wed Jan 27 12:34:01 2021 -0300
+
+    Project created
